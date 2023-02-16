@@ -17,7 +17,7 @@ export class FilterPipe implements PipeTransform {
             let arrayFiltered = [];
 
             for (let itemList of value) {
-                if (itemList[propName] === filterInput) {
+                if ((itemList[propName] as string).includes(filterInput, 0)) {
                     arrayFiltered.push(itemList);
                 }
             }
